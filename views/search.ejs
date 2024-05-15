@@ -1,0 +1,17 @@
+<div class="author">
+    <h1 class="author__heading">Search Results </h1>
+</div>
+
+<section class="article">
+    <ul class="article-ul">
+        <!-- the keyword data is from main.js where we used data inside our try block -->
+        <% data.forEach(post => { %>
+        <li>
+            <a href="/post/<%= post._id%>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+</section>
